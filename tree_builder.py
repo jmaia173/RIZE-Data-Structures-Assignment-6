@@ -69,16 +69,6 @@ class TeamTree:
         self.print_tree(node.right, level + 1)
 
 
-# Test your code here
-if __name__ == "__main__":
-    company_directory = None  # placeholder so the test below doesn't clash with the CLI function name
-    test_tree = TeamTree()
-    test_tree.root = EmployeeNode("Jordan")
-    test_tree.insert("Jordan", "Taylor", "right")
-    test_tree.insert("Jordan", "Riley", "left")
-    test_tree.insert("Riley", "Dana", "right")
-    test_tree.insert("Riley", "Morgan", "left")
-    test_tree.print_tree()
 
 
 # CLI functionality
