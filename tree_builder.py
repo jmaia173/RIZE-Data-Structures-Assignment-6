@@ -110,12 +110,12 @@ def company_directory():
 
 
 """
-DESIGN MEMO
+My Design Memo!
 
 Recursive insertion works by treating every node as the root of its own
 smaller tree. insert() starts at the root and checks whether the current
 node's name matches the manager I'm looking for. If it does, I check the
-requested side. If that side is empty, I create a new EmployeeNode there;
+requested side. If that side is empty, I create a new EmployeeNode there, and
 if it's taken, I print an error. If the name doesn't match, the method
 calls itself on the left child and then the right child, so the search
 moves down the tree one level at a time until the manager is found or
@@ -126,7 +126,7 @@ The hardest part was error handling. Because insert() calls itself on
 both branches, a naive version prints "manager not found" many times, once
 for every branch that fails. I solved this by having the recursive calls
 return True or False and only printing the "not found" message from the
-top-level call after the whole tree has been searched. I also had to make
+top level call after the whole tree has been searched. I also had to make
 sure a taken side was reported differently from a missing manager, and
 that an empty tree didn't crash the program.
 
@@ -135,5 +135,8 @@ searching: file systems, the HTML DOM, org charts, and comment threads
 all nest inside each other. A balanced binary search tree finds items in
 O(log n) instead of scanning a whole list in O(n), and recursion
 mirrors the structure, so the code stays short. Lists and dictionaries
-are flatter and can't express parent-child relationships as directly.
+are flatter and can't express parent child relationships as directly.
 """
+
+if __name__ == "__main__":
+    company_directory()
